@@ -1,9 +1,16 @@
 
-function greet(name="John", lastname="Doe", suffix="III"){
-    console.log(`Hello ${name} ${lastname} ${suffix}`)
+function add(a, b){
+
+    let sum = a + b
+    
+    sum = sum >= 10 ? sum : `${0}${sum}`
+    
+    return Number(sum)
 }
 
-greet('Wellington', 'Lira', 'XV')
+console.log(add(2, 2))
+
+
 
 
 
