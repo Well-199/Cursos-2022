@@ -1,1 +1,1 @@
-#### Caso real de uso do useReducer 1
+#### Caso real de uso do useReducer 2
