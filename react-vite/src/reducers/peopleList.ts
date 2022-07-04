@@ -1,5 +1,5 @@
 import { useReducer } from "react"
-import { uuid } from 'uuidv4'
+import { v4 as uuid } from "uuid"
 
 type Person = {
     id: string,
@@ -21,10 +21,14 @@ const reducer = (state: Person[], action: ActionType) => {
     switch(action.type){
         case 'ADD':
             if(action.payload?.name){
-                state.push({
+
+                const newState = [...state]
+
+                newState.push({
                     id: uuid(),
                     name: action.payload?.name
                 })
+                return newState
             }
         break
         case 'DEL':
